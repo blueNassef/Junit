@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">Junit</string>
+    <string name="app_name">Junit tutorial</string>
+    <string-array name="tuts">
+        <item>Introduction to unit testing</item>
+        <item>First junit success</item>
+        <item>Improving junit code"</item>
+        <item>assertTrue and assertFalse</item>
+        <item>Before and After annotations </item>
+        <item>Before class and After class annotations</item>
+        <item>Comparing arrays</item>
+        <item>Exceptions handling in test class</item>
+        <item>Performance test annotation</item>
+        <item>Parametrized test annotation</item>
+        <item>Test suites</item>
+    </string-array>
 </resources>

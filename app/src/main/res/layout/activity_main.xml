@@ -19,4 +19,23 @@
         android:visibility="invisible"
         android:contentDescription="" />
 
+    <ListView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:background="#000000"
+        android:visibility="invisible"
+        android:divider="#ffffff"
+        android:dividerHeight="1dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:ignore="MissingConstraints">
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragContainer">
+    </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>
