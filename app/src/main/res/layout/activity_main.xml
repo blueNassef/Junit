@@ -23,7 +23,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:id="@+id/listView"
-        android:background="#000000"
+        android:background="#808080"
         android:visibility="invisible"
         android:divider="#ffffff"
         android:dividerHeight="1dp"

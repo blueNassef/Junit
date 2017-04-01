@@ -1,11 +1,88 @@
 <resources>
-    <string name="app_name">Junit tutorial</string>
+    <string name="app_name">nit tutorial</string>
+    <string name="benefits_of_using_unit_testing">Benefits of using unit testing:</string>
+    <string name="intro_body">1) You know it works now because you\'ve run the test.\n
+        2) Unit tests give you instant visual feedback.\n
+        3) Test reduces bugs in existing or new features.\n
+        4) Tests allow refactoring efficiently.\n
+        5) Tests reduce fear.\n
+    and finally the famous question:\n
+    <b><i>why don\'t we just use Sysout?</i></b>\n
+    well, that\'s not testing. this is called LMFAO (looking manually for abnormal outputs).</string>
+    <string name="first_junit_title">First of all let\'s create a method  (which will be tested of course.):</string>
+    <string name="first_junit_first_method_discussion">Now let\'s discuss what happened here.\n
+        This method purpose should take a string and check it\'s first two characters  if any one of them is <b><i>A</i></b>
+        it will be truncated from the output result.\n
+        <b><i>now lets discuss every line of the method.</i></b>\n
+        First line we\'ve created a method named truncate which takes a string(str) as an argument\n
+        Line 2. if statement to check the length of the string if it\'s two or less
+        then check if one of them is <b><i>A</i></b> replace it then return the result.\n
+        Line 5. if the string length is greater than two then we need a place to store the first two characters
+        separately to be able to check them.\n
+        Line 6. a place to store the rest of the string.\n
+        Line 7. the method do it\'s function on checking the presence of <b><i>A</i></b> in the first two places
+        if there is <b><i>A</i></b> remove it and then add it to the rest of the string and return it.</string>
+    <string name="first_junit_before_testing_statement"><b><i>Now let\'s see how to test this method.</i></b></string>
+    <string name="describe_project_structure">As you can see, this is the default project structure
+    if you are using (Maven or Ant) build tools, if this is not your scenario then it\'s highly recommended
+    to create a separate package for test classes to make sure they are not combined with your project
+    when creating jars.</string>
+    <string name="creating_test_case">to create a test case. right click on the test package
+    and choose new>>junit test. choose class name and click finish.</string>
+    <string name="first_test_method">now we have created an empty test case.\n
+    lets add our first test method. to create a test method you need to provide (@Test) annotation
+    before declaring the method, take a look.</string>
+    <string name="first_junit_last_statement">Rule number one. test methods better be <b><i>public</i></b>
+    as if you want to retrieve a method in another test package or class and are always void, we don\'t
+    except anything to return.\nnow let\'s right click and choose Run file\n<b><i>NOTE</i></b>
+    if there is no failing condition then you have a successful case.</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <string name="about_statement">This app aims to provide a clear introduction to unit testing
+    using <b><i>Junit</i></b>. through short descriptions and code snippets. at the end of
+    every tutorial you will find a link to a video discussion <b><i>(in arabic)</i></b>.
+    feel free to leave any feedback and happy coding.</string>
+    <string name="creating_first_test_method">let\'s create our first test method.\n
+    first of all write down all your test cases in this form <b><i>(expected value, actual value)</i></b>.
+    which gives us a scenario like this<b><i>("AACD", "CD")or ("ACD", ""CD) or ("CDEF", "CDEF")or
+        ("CDAA", "CDAA")</i></b>.\n<b><i>Remember</i></b> the method only truncates <b><i>A</i></b>
+    in the first two positions, thats why we have an expected value like that.\n
+    take a look at the code below.\n</string>
+    <string name="first_test_case_discussion">Now let\'s discuss the code.\n
+    starting from line <b><i>no.6</i></b> we create an instance from the class which will be tested.\n
+    line <b><i>no.7</i></b>create a string to hold the actual value.\n
+    line <b><i>no.8</i></b> create a string to hold the expected value.\n
+    line <b><i>no.9</i></b>we have used the <b><i>assertEquals</i></b> to compare the two values.\n
+    now let\'s run the file and you will see we have got a successful test case.\n</string>
+    <string name="change_first_test_expected_value"><b><i>Try</i></b> to change
+    the expected value to (ACD) to see how the test fails.</string>
+    <string name="exercise_first_junit"><b><i><u>Exercise</u></i></b> write test cases for the other
+    three scenarios.\n<b><i>GOT STUCK</i></b> don\'t hesitate to use the <b><i>contact us</i></b> button.</string>
+    <string name="contact_us">Contact us</string>
+    <string name="watch_arabic_video_tutorial">Watch Arabic video tutorial</string>
+    <string name="improving_first">let\'s see what we can do to refactor that code a little bit.\n
+    <b><i>Firstly</i></b> there is no need to define a string variable and then start to use
+    it in the next line, instead we can use our condition directly in the <b><i>assertEquals</i></b>
+     constructor.\nTake a look at the code below.\n</string>
+    <string name="improving_after_first_refactoring">As you can see we have saved a lot of space
+    and the code become more readable, so don\'t forget to always refactor your code, but can we
+    do better than this?\nyes. take a look at this situation. if we want to test the four cases
+    we stated earlier we would end up with something like this.\n</string>
+    <string name="improving_second_attempt">Now what happened from <b><i>line 7</i></b> to
+    <b><i>line 10</i></b> ?\nYes that\'s a repeated constructor in the same method and it\'s
+    always a bad practice to repeat code. instead we should separate every test condition
+    in a separate method with proper naming convention.\nTake a look at this.</string>
+    <string name="improving_after_second_attempt">And so on...</string>
+    <string name="improving_last_statement">Great, but the class instance is still repeated.\n
+    let\'s fix this by making it a global instance and end for now.</string>
+    <string name="improving_exercise"><b><i>Exercise</i></b> complete the other two test cases methods
+    and change the expected value and see what happens.</string>
     <string-array name="tuts">
         <item>Introduction to unit testing</item>
         <item>First junit success</item>
         <item>Improving junit code"</item>
         <item>assertTrue and assertFalse</item>
-        <item>Before and After annotations </item>
+        <item>Before and After annotations  </item>
         <item>Before class and After class annotations</item>
         <item>Comparing arrays</item>
         <item>Exceptions handling in test class</item>

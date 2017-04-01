@@ -5,5 +5,5 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:textSize="30sp"
-    android:textColor="#1483ff"
+    android:textColor="#C0C0C0"
     xmlns:android="http://schemas.android.com/apk/res/android" />

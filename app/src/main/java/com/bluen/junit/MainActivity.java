@@ -1,13 +1,13 @@
 package com.bluen.junit;
 
-import android.content.pm.ActivityInfo;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -24,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher_round);
+
 
         ImageView logo= (ImageView) findViewById(R.id.logo);
         final AlphaAnimation anim= new AlphaAnimation(5f, 0f);
@@ -69,11 +73,136 @@ public class MainActivity extends AppCompatActivity {
                         ft.commit();
                         break;
                     case 1:
-
+                        sp.play(soundId,1,1,0,0,1);
+                        Toast.makeText(getApplicationContext(),itemValue,
+                                Toast.LENGTH_SHORT).show();
+                        sp.play(soundId,1, 1, 0, 0, 1);
+                        ft.add(R.id.fragContainer,new firstJunit());
+                        ft.addToBackStack("");
+                        ft.commit();
+                        break;
+                    case 2:
+                        sp.play(soundId,1,1,0,0,1);
+                        Toast.makeText(getApplicationContext(),itemValue,
+                                Toast.LENGTH_SHORT).show();
+                        sp.play(soundId,1, 1, 0, 0, 1);
+                        ft.add(R.id.fragContainer,new improvingFirstFrag());
+                        ft.addToBackStack("");
+                        ft.commit();
+                        break;
+                    case 3:
+                        sp.play(soundId,1,1,0,0,1);
+                        Toast.makeText(getApplicationContext(),"Coming soon...",
+                                Toast.LENGTH_SHORT).show();
+                        sp.play(soundId,1, 1, 0, 0, 1);
+                        ft.add(R.id.fragContainer,new assertTrueFlaseFrag());
+                        ft.addToBackStack("");
+                        //ft.commit();
+                        break;
+                    case 4:
+                        sp.play(soundId,1,1,0,0,1);
+                        Toast.makeText(getApplicationContext(),"Coming soon...",
+                                Toast.LENGTH_SHORT).show();
+                        sp.play(soundId,1, 1, 0, 0, 1);
+                        ft.add(R.id.fragContainer,new beforeAfterFrag());
+                        ft.addToBackStack("");
+                        //ft.commit();
+                        break;
+                    case 5:
+                        sp.play(soundId,1,1,0,0,1);
+                        Toast.makeText(getApplicationContext(),"Coming soon...",
+                                Toast.LENGTH_SHORT).show();
+                        sp.play(soundId,1, 1, 0, 0, 1);
+                        ft.add(R.id.fragContainer,new beforeClassAfterClassFrag());
+                        ft.addToBackStack("");
+                        //ft.commit();
+                        break;
+                    case 6:
+                        sp.play(soundId,1,1,0,0,1);
+                        Toast.makeText(getApplicationContext(),"Coming soon...",
+                                Toast.LENGTH_SHORT).show();
+                        sp.play(soundId,1, 1, 0, 0, 1);
+                        ft.add(R.id.fragContainer,new comparingArraysFrag());
+                        ft.addToBackStack("");
+                        //ft.commit();
+                        break;
+                    case 7:
+                        sp.play(soundId,1,1,0,0,1);
+                        Toast.makeText(getApplicationContext(),"Coming soon...",
+                                Toast.LENGTH_SHORT).show();
+                        sp.play(soundId,1, 1, 0, 0, 1);
+                        ft.add(R.id.fragContainer,new exceptionsHandlingFrag());
+                        ft.addToBackStack("");
+                        //ft.commit();
+                        break;
+                    case 8:
+                        sp.play(soundId,1,1,0,0,1);
+                        Toast.makeText(getApplicationContext(),"Coming soon...",
+                                Toast.LENGTH_SHORT).show();
+                        sp.play(soundId,1, 1, 0, 0, 1);
+                        ft.add(R.id.fragContainer,new performanceTestFrag());
+                        ft.addToBackStack("");
+                        //ft.commit();
+                        break;
+                    case 9:
+                        sp.play(soundId,1,1,0,0,1);
+                        Toast.makeText(getApplicationContext(),"Coming soon...",
+                                Toast.LENGTH_SHORT).show();
+                        sp.play(soundId,1, 1, 0, 0, 1);
+                        ft.add(R.id.fragContainer,new parametrizedTestFrag());
+                        ft.addToBackStack("");
+                        //ft.commit();
+                        break;
+                    case 10:
+                        sp.play(soundId,1,1,0,0,1);
+                        Toast.makeText(getApplicationContext(),"Coming soon...",
+                                Toast.LENGTH_SHORT).show();
+                        sp.play(soundId,1, 1, 0, 0, 1);
+                        ft.add(R.id.fragContainer,new testSuitesFrag());
+                        ft.addToBackStack("");
+                        //ft.commit();
                         break;
                 }
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.about :
+                android.app.FragmentManager fm= getFragmentManager();
+                android.app.FragmentTransaction ft= fm.beginTransaction();
+                ft.add(R.id.fragContainer,new aboutFrag());
+                ft.addToBackStack("");
+                ft.commit();
+                return true;
+            case R.id.contact:
+                Intent mail= new Intent(Intent.ACTION_SEND);
+                mail.setType("text/plain");
+                mail.putExtra(Intent.EXTRA_EMAIL, new String[]{"bluen.dev@gmail.com"});
+                mail.putExtra(Intent.EXTRA_SUBJECT, "junit tutorial");
+                mail.putExtra(Intent.EXTRA_TEXT,"body of email");
+                try{
+                    startActivity(Intent.createChooser(mail,"Send mail..."));
+                }catch(android.content.ActivityNotFoundException e){
+                    Toast.makeText(this,"Error...\ntry again later",
+                            Toast.LENGTH_SHORT).show();
+                }
+                return true;
+            case R.id.exit :
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

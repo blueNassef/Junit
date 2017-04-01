@@ -5,7 +5,16 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:itemBackground">@color/colorPrimaryDark</item>
+        <item name="android:textColor">#C0C0C0</item>
+        <item name="actionBarTheme">@color/colorPrimaryDark</item>
+        <item name="android:dropDownListViewStyle">@style/popup</item>
+    </style>
+
+    <style name="popup" parent="Widget.AppCompat.ListView.DropDown">
+    <item name="android:divider">@color/colorPrimary</item>
+    <item name="android:dividerHeight">1dp</item>
+    <item name="android:itemBackground">@android:color/white</item>
     </style>
 
 </resources>
