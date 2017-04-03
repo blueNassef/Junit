@@ -17,6 +17,10 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.apptracker.android.track.AppTracker;
+import com.startapp.android.publish.adsCommon.StartAppAd;
+import com.startapp.android.publish.adsCommon.StartAppSDK;
+
 public class MainActivity extends AppCompatActivity {
 
     private ListView lv;
@@ -24,6 +28,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+            AppTracker.startSession(getApplicationContext(),
+                    "O3YWhw1wo0GBqgyk4c0MSW4hy9GBLuzS",AppTracker.ENABLE_AUTO_CACHE);
+
+        AppTracker.loadModuleToCache(getApplicationContext(),"inapp");
+
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher_round);
@@ -67,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
                         sp.play(soundId,1,1,0,0,1);
                         Toast.makeText(getApplicationContext(),itemValue,
                                 Toast.LENGTH_SHORT).show();
-                        sp.play(soundId,1, 1, 0, 0, 1);
                         ft.add(R.id.fragContainer,new introClass());
                         ft.addToBackStack("");
                         ft.commit();
@@ -76,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
                         sp.play(soundId,1,1,0,0,1);
                         Toast.makeText(getApplicationContext(),itemValue,
                                 Toast.LENGTH_SHORT).show();
-                        sp.play(soundId,1, 1, 0, 0, 1);
                         ft.add(R.id.fragContainer,new firstJunit());
                         ft.addToBackStack("");
                         ft.commit();
@@ -85,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
                         sp.play(soundId,1,1,0,0,1);
                         Toast.makeText(getApplicationContext(),itemValue,
                                 Toast.LENGTH_SHORT).show();
-                        sp.play(soundId,1, 1, 0, 0, 1);
                         ft.add(R.id.fragContainer,new improvingFirstFrag());
                         ft.addToBackStack("");
                         ft.commit();
@@ -94,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
                         sp.play(soundId,1,1,0,0,1);
                         Toast.makeText(getApplicationContext(),"Coming soon...",
                                 Toast.LENGTH_SHORT).show();
-                        sp.play(soundId,1, 1, 0, 0, 1);
                         ft.add(R.id.fragContainer,new assertTrueFlaseFrag());
                         ft.addToBackStack("");
                         //ft.commit();
@@ -103,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
                         sp.play(soundId,1,1,0,0,1);
                         Toast.makeText(getApplicationContext(),"Coming soon...",
                                 Toast.LENGTH_SHORT).show();
-                        sp.play(soundId,1, 1, 0, 0, 1);
                         ft.add(R.id.fragContainer,new beforeAfterFrag());
                         ft.addToBackStack("");
                         //ft.commit();
@@ -112,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
                         sp.play(soundId,1,1,0,0,1);
                         Toast.makeText(getApplicationContext(),"Coming soon...",
                                 Toast.LENGTH_SHORT).show();
-                        sp.play(soundId,1, 1, 0, 0, 1);
                         ft.add(R.id.fragContainer,new beforeClassAfterClassFrag());
                         ft.addToBackStack("");
                         //ft.commit();
@@ -121,7 +125,6 @@ public class MainActivity extends AppCompatActivity {
                         sp.play(soundId,1,1,0,0,1);
                         Toast.makeText(getApplicationContext(),"Coming soon...",
                                 Toast.LENGTH_SHORT).show();
-                        sp.play(soundId,1, 1, 0, 0, 1);
                         ft.add(R.id.fragContainer,new comparingArraysFrag());
                         ft.addToBackStack("");
                         //ft.commit();
@@ -130,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
                         sp.play(soundId,1,1,0,0,1);
                         Toast.makeText(getApplicationContext(),"Coming soon...",
                                 Toast.LENGTH_SHORT).show();
-                        sp.play(soundId,1, 1, 0, 0, 1);
                         ft.add(R.id.fragContainer,new exceptionsHandlingFrag());
                         ft.addToBackStack("");
                         //ft.commit();
@@ -139,7 +141,6 @@ public class MainActivity extends AppCompatActivity {
                         sp.play(soundId,1,1,0,0,1);
                         Toast.makeText(getApplicationContext(),"Coming soon...",
                                 Toast.LENGTH_SHORT).show();
-                        sp.play(soundId,1, 1, 0, 0, 1);
                         ft.add(R.id.fragContainer,new performanceTestFrag());
                         ft.addToBackStack("");
                         //ft.commit();
@@ -148,7 +149,6 @@ public class MainActivity extends AppCompatActivity {
                         sp.play(soundId,1,1,0,0,1);
                         Toast.makeText(getApplicationContext(),"Coming soon...",
                                 Toast.LENGTH_SHORT).show();
-                        sp.play(soundId,1, 1, 0, 0, 1);
                         ft.add(R.id.fragContainer,new parametrizedTestFrag());
                         ft.addToBackStack("");
                         //ft.commit();
@@ -157,7 +157,6 @@ public class MainActivity extends AppCompatActivity {
                         sp.play(soundId,1,1,0,0,1);
                         Toast.makeText(getApplicationContext(),"Coming soon...",
                                 Toast.LENGTH_SHORT).show();
-                        sp.play(soundId,1, 1, 0, 0, 1);
                         ft.add(R.id.fragContainer,new testSuitesFrag());
                         ft.addToBackStack("");
                         //ft.commit();
@@ -204,5 +203,17 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void gameOver() {
+        if(AppTracker.isAdReady("inapp")) {
+            AppTracker.loadModule(getApplicationContext(),"inapp");
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        gameOver();
+        super.onBackPressed();
     }
 }

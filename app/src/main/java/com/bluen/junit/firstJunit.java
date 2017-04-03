@@ -24,7 +24,7 @@ public class firstJunit extends Fragment {
         firstVideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(Intent.ACTION_VIEW,Uri.parse("https://"));
+                Intent i= new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.youtube.com/watch?v=Cso2DxwxhKM&index=2&list=PLLousje9t9nhV3GqNg0xgJTrFb8-qvvc5"));
                 startActivity(i);
             }
         });

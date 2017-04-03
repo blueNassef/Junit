@@ -158,7 +158,9 @@
             android:textSize="30sp"
             android:layout_gravity="center"
             android:text="@string/watch_arabic_video_tutorial"/>
-
-
     </LinearLayout>
+
+
+
+
 </ScrollView>
