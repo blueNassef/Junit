@@ -77,6 +77,45 @@
     let\'s fix this by making it a global instance and end for now.</string>
     <string name="improving_exercise"><b><i>Exercise</i></b> complete the other two test cases methods
     and change the expected value and see what happens.</string>
+    <string name="asserttrue_first_txt">Now let\'s try to test another method.\n
+    take a look at the method below.</string>
+    <string name="asserttrue_first_disscusion">First let\'s discuss the method.\n
+    the method aims to compare the first and last two characters in a string and returns
+    true if they are equal, otherwise returns false.\nwe could have a test scenarios like
+    (ABCD), (AABDAA), (AB), (A), (AABA).\nNow let\'s create out test cases..</string>
+    <string name="asserttrue_after_first_test">If we run that test case it should fail.\n
+    because the first two characters are not the same as the last two characters.\n
+    let\'s do some refactoring.</string>
+    <string name="asserttrue_after_refactoring">Much better, but seems that we\'ve forget
+    about code readability, it\'s not a good practice to put a boolean value like
+    <b><i>False</i></b> in the assert constructor. instead we should use
+    <b><i>assertFalse</i></b> take a look.</string>
+    <string name="asserttrue_final_statement">As you can see, we can use
+     <b><i>assertFalse</i></b> and <b><i>assertTrue</i></b> to test boolean values.</string>
+    <string name="asserttrue_exercise"><b><i>Exercise:</i></b> complete all the test cases.</string>
+    <string name="before_after_first">Till now we have used <b><i>
+    @Test, assertEquals, assertTrue</i></b> and <b><i>assertFalse</i></b>.\n
+    Let\'s see two new annotations and know there usage.</string>
+    <string name="before_statement"><b><i>@Before:</i></b> this annotation
+    is used to initialise something which will happen before every
+    test case.\nMainly it\'s used to start a connection to database or
+    a web service,,,etc. take a look at the example below.</string>
+    <string name="before_last_before">For naming conventions the
+    <b><i>@Before</i></b> method is named <b><i>setup</i></b>.\n
+    Now let\'s take a look at <b><i>@After</i></b> annotation.</string>
+    <string name="before_last">As you can see <b><i>@After</i></b> is
+     the same as <b><i>@Before</i></b> except it happens after every
+    test case. and also for naming conventions the <b><i>@After</i></b>
+    method is called <b><i>tearDown</i></b>.</string>
+    <string name="before_class_after_class_first">The <b><i> @BeforeClass</i></b>
+    behaves as the <b><i>@Before</i></b> the only difference is that it
+    runs once at the beginning of the class, it\'s ideal usage is when
+    we want to establish a database connection only once when we are
+    concerned about performance.\n<b><i> Remember:</i></b> the <b><i>
+        @BeforeClass</i></b> method must be static.
+        \nTake a look at the code below.</string>
+    <string name="before_class_after_class_second">I guess you already
+    know what does <b><i>@AfterClass</i></b> do.</string>
     <string-array name="tuts">
         <item>Introduction to unit testing</item>
         <item>First junit success</item>

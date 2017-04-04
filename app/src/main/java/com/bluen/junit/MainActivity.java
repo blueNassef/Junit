@@ -99,35 +99,35 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 3:
                         sp.play(soundId,1,1,0,0,1);
-                        Toast.makeText(getApplicationContext(),"Coming soon...",
+                        Toast.makeText(getApplicationContext(),itemValue,
                                 Toast.LENGTH_SHORT).show();
                         ft.add(R.id.fragContainer,new assertTrueFlaseFrag());
                         ft.addToBackStack("");
-                        //ft.commit();
+                        ft.commit();
                         break;
                     case 4:
                         sp.play(soundId,1,1,0,0,1);
-                        Toast.makeText(getApplicationContext(),"Coming soon...",
+                        Toast.makeText(getApplicationContext(),itemValue,
                                 Toast.LENGTH_SHORT).show();
                         ft.add(R.id.fragContainer,new beforeAfterFrag());
                         ft.addToBackStack("");
-                        //ft.commit();
+                        ft.commit();
                         break;
                     case 5:
                         sp.play(soundId,1,1,0,0,1);
-                        Toast.makeText(getApplicationContext(),"Coming soon...",
+                        Toast.makeText(getApplicationContext(),itemValue,
                                 Toast.LENGTH_SHORT).show();
                         ft.add(R.id.fragContainer,new beforeClassAfterClassFrag());
                         ft.addToBackStack("");
-                        //ft.commit();
+                        ft.commit();
                         break;
                     case 6:
                         sp.play(soundId,1,1,0,0,1);
-                        Toast.makeText(getApplicationContext(),"Coming soon...",
+                        Toast.makeText(getApplicationContext(),itemValue,
                                 Toast.LENGTH_SHORT).show();
                         ft.add(R.id.fragContainer,new comparingArraysFrag());
                         ft.addToBackStack("");
-                        //ft.commit();
+                        ft.commit();
                         break;
                     case 7:
                         sp.play(soundId,1,1,0,0,1);
