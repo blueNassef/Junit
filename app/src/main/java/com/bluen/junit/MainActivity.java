@@ -131,19 +131,19 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 7:
                         sp.play(soundId,1,1,0,0,1);
-                        Toast.makeText(getApplicationContext(),"Coming soon...",
+                        Toast.makeText(getApplicationContext(),itemValue,
                                 Toast.LENGTH_SHORT).show();
                         ft.add(R.id.fragContainer,new exceptionsHandlingFrag());
                         ft.addToBackStack("");
-                        //ft.commit();
+                        ft.commit();
                         break;
                     case 8:
                         sp.play(soundId,1,1,0,0,1);
-                        Toast.makeText(getApplicationContext(),"Coming soon...",
+                        Toast.makeText(getApplicationContext(),itemValue,
                                 Toast.LENGTH_SHORT).show();
                         ft.add(R.id.fragContainer,new performanceTestFrag());
                         ft.addToBackStack("");
-                        //ft.commit();
+                        ft.commit();
                         break;
                     case 9:
                         sp.play(soundId,1,1,0,0,1);

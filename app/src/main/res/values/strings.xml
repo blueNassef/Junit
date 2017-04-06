@@ -116,6 +116,36 @@
         \nTake a look at the code below.</string>
     <string name="before_class_after_class_second">I guess you already
     know what does <b><i>@AfterClass</i></b> do.</string>
+    <string name="compare_arrays_first">Now we are in a situation in which we want
+     to compare two arrays, let\'s take a scenario in which we want
+    to sort an array and test it.\nTake a look at the code.</string>
+    <string name="comparing_arrays_second">First, let\'s discuss the code.\n
+    Line 2. it creates an array of integers called actual and we put
+    random values in it.\n
+    Line 3. we create an array of integers called expected in which we put
+    the values as they were probably sorted.\n
+    Line 4. we sort the actual array using <b><i>Arrays.sort</i></b> method.\n
+    Finally we use <b><i>assertEquals</i></b> to compare the two arrays</string>
+    <string name="compare_arrays_third">IF we Run this file we will see that
+     the test case fail. but why?!!\n
+    the <b><i>assertEquals</i></b> method compares objects and as you can
+     see <b><i>actual</i></b> and <b><i>expected</i></b> are two different
+    objects. so instead we will use <b><i>assertArrayEquals</i></b> which
+        will only compare the data inside the arrays.\n
+    Take a look at the modified code.</string>
+    <string name="exceptions_one">Here is a situation in which i know
+    my method will cause and exception but i\'m not really interested in it,
+    i\'m focusing on something else,\nTake a look at the method below.  </string>
+    <string name="exceptions_two">This method will throw <b><i>NullPointerException</i></b>.
+    sure, i\'m trying to sort an array which don\'t even exist, but let\'s pretend that
+    it\'s not my problem now, i just want to get through this. here comes the
+    junit exceptions usage.\nTake a look at the modified method which won\'t through
+     any exception.</string>
+    <string name="exception_three"><b><i>Remember</i></b> there is a down side
+    in junit exception handling. if the test case is waiting for exception which
+    didn\'t happen it will fail. in other words if the <b><i>actual</i></b> array has
+    values and you\'ve mentioned the <b><i>NullPointerException</i></b> this
+    test case will fail.</string>
     <string-array name="tuts">
         <item>Introduction to unit testing</item>
         <item>First junit success</item>
