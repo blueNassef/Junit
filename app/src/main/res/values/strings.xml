@@ -146,6 +146,51 @@
     didn\'t happen it will fail. in other words if the <b><i>actual</i></b> array has
     values and you\'ve mentioned the <b><i>NullPointerException</i></b> this
     test case will fail.</string>
+    <string name="performance_first">Sometimes we don\'t really care about
+    the test. we know that the function is working. instead we want to test it\'s
+    runtime. let\'s say we have an array which needs to be sorted and you
+    don\'t know whether to use <b><i>bubble sort</i></b> or <b><i>selection sort</i></b>.
+    which one is best in this situation.\nFirst let\'s generate a random array</string>
+    <string name="performance_second">Now let\'s make a method to print
+        the generated array in an enhanced way</string>
+    <string name="performance_third">Great, let\'s create a method to sort
+    the generated array using <b><i>BubbleSort</i></b></string>
+    <string name="performance_fourth">Another method for
+    <b><i>SelectionSort</i></b>.</string>
+    <string name="performance_fifth">To decide which method is better, head to
+    our test class and create the test method specifying the
+        <b><i>timeout</i></b> parameter </string>
+    <string name="performance_six">Now just run the test, if the test passes
+    then you know it takes less than one second to generate this array.
+    comment line no.3 and un comment line no.4 to see if bubble sort passes
+    the test. and so on.</string>
+    <string name="performance_last"><b><i>Note</i></b> you won\'t see
+    a significant change in performance between the two sorting methods like this.
+    instead increase the arraysize to 10000 and you will see that with huge arrays
+    which sorting method you should use.</string>
+    <string name="para_one">Remember the testTruncate. we\'ve created four
+    test cases to test our four scenarios.\nRefresh your memory take a look.</string>
+    <string name="para_second">we\'ve created four methods with four
+    <b><i>assertEquals</i></b> which are the same. just because we\'ve
+    different inputs and outputs. what if we could have put all this data
+    in an array and just compare them. with parametrized tests we can. but with
+    some rules.</string>
+    <string name="para_third"><b><i>Rule no.1:</i></b>
+    add the following annotation before class <b><i>@RunWith(Parameterized.class)</i></b>.
+    \n<b><i> Rule no.2:</i></b> the method which holds the parameters must be
+    static and with <b><i>@Parameters</i></b> annotation.\n
+    <b><i>Rule no.3:</i></b> create the constructor to differ between the
+    actual and the expected strings.\nTake a look at the full code.</string>
+    <string name="suite_first">It\'s always a good practice to test each method
+    in a separate test class, but like that you will end up with bunch of
+    test class. now what happens if you have been asked for two or three
+    test class?. we combine them together using test suites. </string>
+    <string name="suite_second">Right click on your test package, choose new,
+    other then test suite. give it a name and then finish.\nYou will end up
+    with something like this.</string>
+    <string name="suite_last">Now if we want to add another test class to
+    this suite we just add it in the <b><i>SuiteClass</i></b> comma separated.
+    if we run this file it will run both the class together</string>
     <string-array name="tuts">
         <item>Introduction to unit testing</item>
         <item>First junit success</item>

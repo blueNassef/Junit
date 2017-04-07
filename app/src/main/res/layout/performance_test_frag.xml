@@ -15,7 +15,84 @@
             android:layout_height="wrap_content"
             android:textColor="#C0C0C0"
             android:textSize="30sp"
-            android:text="@string/exception_three"/>
+            android:text="@string/performance_first"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/performance_first"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#C0C0C0"
+            android:textSize="30sp"
+            android:text="@string/performance_second"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/performance_second"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#C0C0C0"
+            android:textSize="30sp"
+            android:text="@string/performance_third"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/performance_third"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#C0C0C0"
+            android:textSize="30sp"
+            android:text="@string/performance_fourth"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/performance_fourth"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#C0C0C0"
+            android:textSize="30sp"
+            android:text="@string/performance_fifth"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/performance_fifth"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#C0C0C0"
+            android:textSize="30sp"
+            android:text="@string/performance_six"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#C0C0C0"
+            android:textSize="30sp"
+            android:text="@string/performance_last"/>
 
         <View
             android:layout_width="match_parent"

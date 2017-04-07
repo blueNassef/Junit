@@ -24,7 +24,7 @@ public class parametrizedTestFrag extends Fragment {
         parametrizedVideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+                Intent i= new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/13MvOb3DzdQ"));
                 startActivity(i);
             }
         });
